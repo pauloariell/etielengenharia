@@ -8,7 +8,7 @@ body {
 
 .item1 {
   grid-area: header;
-  //background-color: darkorange;
+  /*background-color: darkorange;*/
 }
 .item1 img {
   height: 100px;
@@ -29,12 +29,6 @@ body {
   grid-gap: 1rem;
   align-content: center;
   padding: 10px;
-}
-.container > div {
-  /* background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px; */
 }
 .item5 img {
   width: 80%;
