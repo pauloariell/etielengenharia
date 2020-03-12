@@ -7,9 +7,15 @@ import { SobreComponent } from './sobre/sobre.component';
 
 
 @NgModule({
-  declarations: [ContatoComponent, ServicosComponent, SobreComponent],
+  declarations: [
+    ContatoComponent, 
+    ServicosComponent, 
+    SobreComponent],
   imports: [
-    CommonModule
+    CommonModule,
+  ],
+  exports:[
+    ContatoComponent
   ]
 })
 export class BodyModule { }

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 import { HomeModule } from './Home/home.module';
+import { BodyModule } from './Home/body/body.module';
 
 @NgModule({
   declarations: [

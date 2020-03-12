@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home.component';
+import { BodyModule } from './body/body.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { HomeComponent } from './home.component';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    BodyModule
   ]
 })
 export class HomeModule { }
