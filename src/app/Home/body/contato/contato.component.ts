@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contato.component.css']
 })
 export class ContatoComponent implements OnInit {
-
+  assuntos: string[] = [
+    'Contato para Empresas',
+    'Contato para pessoas físicas',
+    'Para Vagas de Estágio'
+  ]
   constructor() { }
 
   ngOnInit(): void {

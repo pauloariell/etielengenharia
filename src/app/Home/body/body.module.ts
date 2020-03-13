@@ -10,12 +10,14 @@ import { SobreComponent } from './sobre/sobre.component';
   declarations: [
     ContatoComponent, 
     ServicosComponent, 
-    SobreComponent],
+    SobreComponent
+  ],
   imports: [
     CommonModule,
   ],
   exports:[
-    ContatoComponent
+    ContatoComponent,
+    SobreComponent
   ]
 })
 export class BodyModule { }
