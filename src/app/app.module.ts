@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { AppRoutingModule } from './app.routing.module';
 import { HomeModule } from './Home/home.module';
 
@@ -12,7 +14,8 @@ import { HomeModule } from './Home/home.module';
   imports: [
     BrowserModule,
     HomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

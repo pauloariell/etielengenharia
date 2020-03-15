@@ -1,41 +1,48 @@
-<section class="container" id="contato">
+<section class="container mb-5 mt-5" id="contato">
     <h2>Contato</h2>
     <p>Entre em contato conosco</p>
     <p>Conte para Etiel qual sua necessidade e entraremos em contato</p>
-    <form>
-        <div class="form-group">
-            <label for="contato-nome"><strong>Nome:</strong></label>
-            <input class="form-control" type="text" id="contato-nome" placeholder="Seu nome" required>
-        </div>
-        <div class="form-group">
-            <div class="mb-3">
-                <label for="contato-nome"><strong>E-mail:</strong></label>
-                <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" required>
-                <div class="invalid-feedback">
-                    Atenção, e-mail com formatação invalida.
+    <div class="row">
+        <picture class="col-sm-6">
+            <img class="img-thumbnail" src="{{imgContact}}" alt="">
+        </picture>
+        <div class="col-sm-6">
+            <form>
+                <div class="form-group">
+                    <label for="contato-nome"><strong>Nome:</strong></label>
+                    <input class="form-control" type="text" id="contato-nome" placeholder="Seu nome" required>
                 </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="mb-3">
-                <label for="state"><strong>Assunto:</strong></label>
-                <select class="custom-select  d-block w-100" id="state" required>
-                    <option>Escolha...</option>
-                    <option *ngFor="let assunto of assuntos">{{assunto}}</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please provide a valid state.
+                <div class="form-group">
+                    <div class="mb-3">
+                        <label for="contato-nome"><strong>E-mail:</strong></label>
+                        <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" required>
+                        <div class="invalid-feedback">
+                            Atenção, e-mail com formatação invalida.
+                        </div>
+                    </div>
                 </div>
-            </div>  
+                <div class="form-group">
+                    <div class="mb-3">
+                        <label for="state"><strong>Assunto:</strong></label>
+                        <select class="custom-select  d-block w-100" id="state" required>
+                            <option>Escolha...</option>
+                            <option *ngFor="let assunto of assuntos">{{assunto}}</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+                    </div>  
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <textarea class="form-control" rows="4" id="descricao"></textarea>
+                    </div>
+                </div>
+                <hr class="mb-2">
+                <div class="form-group center">
+                    <button type="button" class="btn btn-secondary btn-lg btn-block">Enviar</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <div class="input-group">
-                <textarea class="form-control" rows="4" id="descricao"></textarea>
-            </div>
-        </div>
-        <hr class="mb-2">
-        <div class="form-group center">
-            <button type="button" class="btn btn-secondary btn-lg btn-block">Enviar</button>
-        </div>
-    </form>
+    </div>
 </section>

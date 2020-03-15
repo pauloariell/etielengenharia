@@ -17,6 +17,7 @@ import { SobreComponent } from './sobre/sobre.component';
   ],
   exports:[
     ContatoComponent,
+    ServicosComponent,
     SobreComponent
   ]
 })

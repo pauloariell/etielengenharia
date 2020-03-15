@@ -11,6 +11,9 @@ export class ContatoComponent implements OnInit {
     'Contato para pessoas físicas',
     'Para Vagas de Estágio'
   ]
+
+  imgContact = "assets/image/contact-us-3.jpg";
+
   constructor() { }
 
   ngOnInit(): void {
