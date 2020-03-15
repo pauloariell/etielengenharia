@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatoComponent implements OnInit {
   assuntos: string[] = [
-    'Contato para Empresas',
-    'Contato para pessoas físicas',
-    'Para Vagas de Estágio'
+    'Trabalhe conosco',
+    'Comercial',
+    'Dúvidas',
+    'Financeiro',
+    'Fornecedores',
+    'Administrativo'
   ]
 
   imgContact = "assets/image/contact-us-3.jpg";
