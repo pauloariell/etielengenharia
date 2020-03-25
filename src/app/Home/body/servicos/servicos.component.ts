@@ -8,33 +8,27 @@ import { Component, OnInit } from '@angular/core';
 export class ServicosComponent implements OnInit {
   servicos = [
     {
-      img: './assets/image/regularizacao_de_Imoveis.jpg',
-      titulo: 'Regularização de Imóveis',
-      descricao:'Regularização de Imóveis',
+      img: './assets/image/pericia_engenharia.jpg',
+      titulo: 'Perícias de Engenharia',
+      descricao:'Judiciais, extrajudiciais, cautelares, arbitrárias, em Edificações, em ações reais imobiliárias, etc',
       active: 'active'
     },
     {
+      img: './assets/image/regularizacao_de_Imoveis.jpg',
+      titulo: 'Avaliações de Imóveis - Urbanos e Rurais',
+      descricao:'Garantias, Patrimoniais, Desapropriação, Revisional de Aluguel, Renovatória de contrato de locação, etc',
+      active: ''
+    },
+    {
       img: './assets/image/vistorias_de _obras.jpg',
-      titulo: 'Vistorias de Obras',
-      descricao:'Vistorias de Obras',
+      titulo: 'Vistorias de obras',
+      descricao:' Medições, entregas de obras, vistorias de constatação / Análise comparativa de conformidade / Causalidade, etc',
       active: ''      
     },
     {
       img: './assets/image/calculo_do_valor_de_renovacao_de_locacao.jpg',
-      titulo: 'Cálculo do valor de renovação de locação',
-      descricao:'Cálculo do valor de renovação de locação',
-      active: ''
-    },
-    {
-      img: './assets/image/laudos_de_avaliacoes_de_imoveis.jpg',
-      titulo: 'Laudos de Avaliações de Imóveis',
-      descricao:'Laudos de Avaliações de Imóveis',
-      active: ''
-    },
-    {
-      img: './assets/image/pericia_engenharia.jpg',
-      titulo: 'Perícias de Engenharia',
-      descricao:'Perícias de Engenharia',
+      titulo: 'Regularização de imóvel',
+      descricao:'Acompanhamento de entrega de documentações, relatório técnico de vistoria, conformidades, projetos, etc',
       active: ''
     }
   ];
