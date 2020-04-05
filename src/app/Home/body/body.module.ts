@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContatoComponent } from './contato/contato.component';
 import { ServicosComponent } from './servicos/servicos.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { NoticiasComponent } from './noticias/noticias.component';
+import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.component';
+import { ContatoComponent } from './contato/contato.component';
 
 
 
@@ -10,7 +12,9 @@ import { SobreComponent } from './sobre/sobre.component';
   declarations: [
     ContatoComponent, 
     ServicosComponent, 
-    SobreComponent
+    SobreComponent,
+    NoticiasComponent,
+    TrabalheConoscoComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +22,9 @@ import { SobreComponent } from './sobre/sobre.component';
   exports:[
     ContatoComponent,
     ServicosComponent,
-    SobreComponent
+    SobreComponent,
+    NoticiasComponent,
+    TrabalheConoscoComponent
   ]
 })
 export class BodyModule { }
