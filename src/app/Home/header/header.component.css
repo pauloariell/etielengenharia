@@ -1,8 +1,11 @@
 .bg-secondary {
-    background-color: #f1f2f3!important
+    background-color: #f1f2f3!important 
 }
 
-.home-img {
-    max-height: 590px;
-    width: 100%;
-}
+.fixed-top-custom {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
