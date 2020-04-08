@@ -5,3 +5,18 @@
 .icon-etiel {
     color: #ff7f00;
 }
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+}
+.copyright .link-logo{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0;
+    width: 200px;
+    height: 89px;
+}
