@@ -1,4 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/*
+*font-family: 'Roboto', sans-serif;
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
-  padding-top: 60px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0.50rem;
+}
+
+body::-webkit-scrollbar-track {
+  /* background: #1e1e24; */
+  background: #d4d7de;
+}
+
+body::-webkit-scrollbar-thumb {
+  /* background: #d4d7de; */
+  background: #ff7f00;
 }

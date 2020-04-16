@@ -9,3 +9,61 @@
     left: 0;
     z-index: 1030;
   }
+
+.navbar-custom{
+    position: fixed;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #d4d7de;
+    width: 100%;
+    height: 45px;
+    z-index: 2;
+}
+
+.logo {
+    flex: 1 1 auto; /*Estudar porque */
+    margin-left: 2%;
+}
+
+.logo img {
+    width: 100px;
+}
+
+a {
+    margin: 15px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+a:hover{
+    color: #e47302;
+}
+
+.navbar-nav-custom{
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    list-style: none;
+    margin-right: 2%;
+    margin-top: 1.25%;
+}
+
+/*Para ativar a barra quando responsivel*/
+/* .nav-active{
+transform: translateX(0%)!important;
+} */
+
+.banner-area{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    top: 40px;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
