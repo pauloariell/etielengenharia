@@ -1,0 +1,95 @@
+.em-breve img {
+  position: absolute !important;
+  width: 200vw !important;
+  height: 100vh !important;
+}
+
+.banner {
+  background-color: rgba(0, 0, 0, .40);
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2rem;
+  color: #fff !important;
+  max-width: 750px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 80px;
+}
+
+.logo {
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 80%;
+}
+
+.card-body i {
+  height: 50px;
+  /*color: #ff8c00;*/
+}
+
+
+.rede-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+}
+
+a {
+  color: inherit;
+}
+
+.rede-social a {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+
+.rede-item svg {
+  color: #ff8c00;
+  /* transition: font-size 1s !important; */
+  -webkit-transition: color 12s, font-size 12s;
+  -moz-transition: color 12s, font-size 12s;
+  -o-transition: color 12s, font-size 12s;
+  transition: color 12s, font-size 12s;
+}
+
+.rede-item svg:hover {
+  font-size: 200%;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    position: relative;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 80%;
+    height: 30%;
+  }
+
+  .card-body h1 {
+    font-size: 150% !important;
+  }
+
+  .card-body svg {
+    height: 20px;
+    color: #ff8c00;
+  }
+
+  .rede-social {
+    font-size: 30px;
+    color: #ff8c00;
+  }
+}
