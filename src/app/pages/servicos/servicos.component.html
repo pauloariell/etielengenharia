@@ -1,0 +1,17 @@
+<section class="servicos-area">
+  <div class="myContainer">
+    <h1>Serviços</h1>
+    <div *ngFor="let servico of servicos" class="myCard">
+      <div class="imgBx">
+        <img src="{{ servico.img }}" alt="{{ servico.titulo }}">
+      </div>
+      <div class="contentBx">
+        <div class="content">
+          <h2>{{ servico.titulo }}</h2>
+          <p>{{ servico.descricao }}</p>
+          <a href="#">Leia mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
