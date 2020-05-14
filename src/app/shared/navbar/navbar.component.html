@@ -1,0 +1,39 @@
+<nav *ngIf="!isEmBreve()" id="navbar" [ngClass]="[
+    true ? 'navbar' : '',
+    true ? 'navbar-expand-lg' : '',
+    true ? 'fixed-top' : '',
+    home ? 'navbar-transparent' : 'bg-primary'
+  ]" (scroll)="onWindowScroll($event);">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="#">
+                <img [src]="LogoImg" alt="">
+            </a>
+            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse"
+                data-target="#navbar-transparent" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar bg-dark"></span>
+                <span class="navbar-toggler-bar bg-dark"></span>
+                <span class="navbar-toggler-bar bg-dark"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-transparent">
+            <ul class="navbar-nav ml-auto">
+                <li *ngFor="let menu of menus" class="nav-item">
+                    <a class="nav-link" href="{{menu.href}}">{{ menu.title }}</a>
+                </li>
+
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</nav>
