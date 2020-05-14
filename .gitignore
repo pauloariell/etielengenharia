@@ -44,5 +44,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-*.pdf
-/Documentation
+
+# Others
+/src/assets/img/old
