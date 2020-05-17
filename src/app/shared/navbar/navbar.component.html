@@ -1,10 +1,16 @@
-<div *ngIf="!isEmBreve()" id="navbar" class="navbar-etiel fixed-top">
-    <a href="#" class="logo">
-        <img [src]="LogoImg" alt="">
+<div 
+    *ngIf="!isEmBreve()" id="navbar" class="navbar-etiel"
+    [ngClass] ="[
+        true ? 'navbar-etiel' : '',
+        home ? 'navbar-transparent' : ''
+        ]"
+    (scroll)="onWindowScroll($event);">
+    <a href=" #" class="logo">
+    <img [src]="LogoImg" alt="">
     </a>
     <ul class="nav-etiel">
         <li *ngFor="let menu of menus" class="">
-            <a class="" href="#{{menu.href}}">{{ menu.title }}</a>
+            <a class="" href="{{menu.href}}">{{ menu.title }}</a>
         </li>
     </ul>
     <div class="burguer">
@@ -14,7 +20,7 @@
     </div>
 </div>
 
-<!-- <nav *ngIf="!isEmBreve()" id="navbar" [ngClass]="[
+<!-- <nav *ngIf="!isEmBreve()" id="navbar" [ngClass] ="[
     true ? 'navbar' : '',
     true ? 'navbar-expand-lg' : '',
     true ? 'fixed-top' : '',

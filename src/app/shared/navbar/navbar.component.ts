@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, HostListener, Inject } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ElementRef, HostListener, Inject } from '@angular/core';
 import { trigger, state, transition, style, animate } from '@angular/animations';
 import { Location, LocationStrategy, PathLocationStrategy, DOCUMENT } from '@angular/common';
 
@@ -64,50 +64,42 @@ export class NavbarComponent implements OnInit {
     console.log(this.home);
   };
 
+  ngAfterViewInit() {
+    const burguer = this.element.nativeElement.querySelector('.burguer');
+    const nav = this.element.nativeElement.querySelector('ul');
+    const navLinks = this.element.nativeElement.querySelectorAll('ul.nav-etiel li');
+    // .addEventListener('click', this.onClick.bind(this));
+    burguer.addEventListener('click', () => {
+      //toggle nav
+      nav.classList.toggle('nav-active');
+
+      // //Animate links
+      navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+          link.style.animation = ''
+        } else {
+          link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`
+        }
+      });
+
+      //Burguer animation
+      burguer.classList.toggle('burguer-close');
+    });
+
+  };
+
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e: Event) {
-    if (this.home){
+    if (this.home) {
       if (window.pageYOffset > 50) {
-        let element = document.getElementById('navbar');
-        element.classList.add('bg-primary');
+        let element = document.getElementById('navbar-etiel');
+        // element.classList.add('bg-primary');
         element.classList.remove('navbar-transparent');
       } else {
         let element = document.getElementById('navbar');
-        element.classList.remove('bg-primary');
+        // element.classList.remove('bg-primary');
         element.classList.add('navbar-transparent');
       }
-    }
-  };
-
-  sidebarOpen() {
-    const toggleButton = this.toggleButton;
-    const html = document.getElementsByTagName('html')[0];
-    // console.log(html);
-    // console.log(toggleButton, 'toggle');
-
-    setTimeout(function () {
-      toggleButton.classList.add('toggled');
-    }, 500);
-    html.classList.add('nav-open');
-
-    this.sidebarVisible = true;
-  };
-
-  sidebarClose() {
-    const html = document.getElementsByTagName('html')[0];
-    // console.log(html);
-    this.toggleButton.classList.remove('toggled');
-    this.sidebarVisible = false;
-    html.classList.remove('nav-open');
-  };
-
-  sidebarToggle() {
-    // const toggleButton = this.toggleButton;
-    // const body = document.getElementsByTagName('body')[0];
-    if (this.sidebarVisible === false) {
-      this.sidebarOpen();
-    } else {
-      this.sidebarClose();
     }
   };
 
