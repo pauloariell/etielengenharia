@@ -3,14 +3,32 @@
       <div class="thecontainer">
         <div class="contact-box">
           <div class="left"></div>
-          <div class="right">
+          <form formGroupName="contactForm" class="right">
             <h2>Contato</h2>
-            <input type="text" class="field" placeholder="Seu nome">
-            <input type="email" class="field" placeholder="e-mail">
-            <input type="text" class="field" placeholder="telefone">
-            <textarea class="field area" placeholder="Olá..."></textarea>
+            <input 
+              type="text"
+              class="field"
+              placeholder="Seu nome"
+              formControlName="name"
+            >
+            <input
+              type="email"
+              class="field"
+              placeholder="e-mail"
+              formControlName="email"
+            >
+            <input 
+              type="text"
+              class="field"
+              placeholder="telefone"
+              formControlName="phone"
+            >
+            <textarea 
+              class="field area" 
+              placeholder="Olá..."
+            ></textarea>
             <button class="mybtn">Enviar Email</button>
-          </div>
+          </form>
         </div>
       </div>
   </div>
