@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit, ElementRef, HostListener, Inject } from '@angular/core';
 import { trigger, state, transition, style, animate } from '@angular/animations';
+import { Router, RouterLink } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy, DOCUMENT } from '@angular/common';
 
 

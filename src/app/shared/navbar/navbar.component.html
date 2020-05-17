@@ -10,7 +10,7 @@
     </a>
     <ul class="nav-etiel">
         <li *ngFor="let menu of menus" class="">
-            <a class="" href="{{menu.href}}">{{ menu.title }}</a>
+            <a class="" [routerLink]="{{menu.href}}" >{{ menu.title }}</a>
         </li>
     </ul>
     <div class="burguer">
