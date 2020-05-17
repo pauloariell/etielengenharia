@@ -18,6 +18,13 @@ body {
   align-items: center;
 }
 
+.title{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 .myContainer {
   position: relative;
   max-width: 1000px;
@@ -47,8 +54,8 @@ body {
 .myContainer .myCard .imgBx {
   position: relative;
   left: 25px;
-  width: 500px;
-  height: 400px;
+  width: 200px;
+  height: 175px;
   z-index: 1;
 }
 .myContainer .myCard:nth-child(even) .imgBx {
@@ -67,9 +74,9 @@ body {
 .myContainer .myCard .contentBx {
   position: relative;
   right: 25px;
-  width: 500px;
-  height: 400px;
-  background: #ebebeb;
+  width: 200px;
+  height: 175px;
+  background: #ff8c00;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,21 +91,21 @@ body {
 .myContainer .myCard .contentBx:before {
   content: '';
   position: absolute;
-  top: -50px;
-  bottom: -50px;
+  top: -25px;
+  bottom: -25px;
   left: 0;
   right: 0;
-  background: #ebebeb;
+  background: #ff8c00;
   z-index: -1;
 }
 
 .myContainer .myCard .contentBx h2 {
-  font-size: 40px;
+  font-size: 20px;
   color: #000;
 }
 
 .myContainer .myCard .contentBx p {
-  font-size: 20px;
+  font-size: 10px;
   color: #000;
 }
 
@@ -118,6 +125,10 @@ body {
 }
 
 @media (max-width: 1000px) {
+  .servicos-area {
+    padding: 0px;
+    padding-top: 60px;
+  }
   .myContainer .myCard {
     flex-direction: column;
     max-width: 350px;
