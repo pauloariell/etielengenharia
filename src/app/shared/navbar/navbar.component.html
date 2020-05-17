@@ -1,4 +1,20 @@
-<nav *ngIf="!isEmBreve()" id="navbar" [ngClass]="[
+<div *ngIf="!isEmBreve()" id="navbar" class="navbar-etiel fixed-top">
+    <a href="#" class="logo">
+        <img [src]="LogoImg" alt="">
+    </a>
+    <ul class="nav-etiel">
+        <li *ngFor="let menu of menus" class="">
+            <a class="" href="#{{menu.href}}">{{ menu.title }}</a>
+        </li>
+    </ul>
+    <div class="burguer">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</div>
+
+<!-- <nav *ngIf="!isEmBreve()" id="navbar" [ngClass]="[
     true ? 'navbar' : '',
     true ? 'navbar-expand-lg' : '',
     true ? 'fixed-top' : '',
@@ -22,18 +38,7 @@
                 <li *ngFor="let menu of menus" class="nav-item">
                     <a class="nav-link" href="{{menu.href}}">{{ menu.title }}</a>
                 </li>
-
-
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
-                </li> -->
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->
