@@ -54,19 +54,16 @@ a {
   display: flex;
   margin: 0px;
   padding: 0px;
+  color: rgba(0, 0, 0, 0);
 }
 
-.rede-item svg {
+.rede-item i {
   color: #ff8c00;
-  /* transition: font-size 1s !important; */
-  -webkit-transition: color 12s, font-size 12s;
-  -moz-transition: color 12s, font-size 12s;
-  -o-transition: color 12s, font-size 12s;
-  transition: color 12s, font-size 12s;
+  transition: font-size .5s;
 }
 
-.rede-item svg:hover {
-  font-size: 200%;
+.rede-item i:hover {
+  font-size: 115%;
   color: #fff;
 }
 
@@ -83,7 +80,7 @@ a {
     font-size: 150% !important;
   }
 
-  .card-body svg {
+  .card-body i {
     height: 20px;
     color: #ff8c00;
   }
