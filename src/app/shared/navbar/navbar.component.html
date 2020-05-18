@@ -1,16 +1,16 @@
-<div 
-    *ngIf="!isEmBreve()" id="navbar" class="navbar-etiel"
-    [ngClass] ="[
+<div *ngIf="!isEmBreve()" id="navbar" class="navbar-etiel" [ngClass]="[
         true ? 'navbar-etiel' : '',
         home ? 'navbar-transparent' : ''
-        ]"
-    (scroll)="onWindowScroll($event);">
+        ]" (scroll)="onWindowScroll($event);">
     <a href=" #" class="logo">
-    <img [src]="LogoImg" alt="">
+        <img [src]="LogoImg" alt="">
     </a>
     <ul class="nav-etiel">
+        <li>
+            <a [routerLink]="['/home']">Home</a>
+        </li>
         <li *ngFor="let menu of menus" class="">
-            <a class="" href="{{menu.href}}">{{ menu.title }}</a>
+            <a class="" [routerLink]="['/home']" [fragment]="menu.href">{{ menu.title }}</a>
         </li>
     </ul>
     <div class="burguer">
@@ -19,32 +19,3 @@
         <div class="line3"></div>
     </div>
 </div>
-
-<!-- <nav *ngIf="!isEmBreve()" id="navbar" [ngClass] ="[
-    true ? 'navbar' : '',
-    true ? 'navbar-expand-lg' : '',
-    true ? 'fixed-top' : '',
-    home ? 'navbar-transparent' : 'bg-primary'
-  ]" (scroll)="onWindowScroll($event);">
-    <div class="container">
-        <div class="navbar-translate">
-            <a class="navbar-brand" href="#">
-                <img [src]="LogoImg" alt="">
-            </a>
-            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse"
-                data-target="#navbar-transparent" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation" (click)="sidebarToggle()">
-                <span class="navbar-toggler-bar bg-dark"></span>
-                <span class="navbar-toggler-bar bg-dark"></span>
-                <span class="navbar-toggler-bar bg-dark"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-transparent">
-            <ul class="navbar-nav ml-auto">
-                <li *ngFor="let menu of menus" class="nav-item">
-                    <a class="nav-link" href="{{menu.href}}">{{ menu.title }}</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav> -->

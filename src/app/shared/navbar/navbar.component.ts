@@ -26,10 +26,6 @@ export class NavbarComponent implements OnInit {
 
   public menus = [
     {
-      title: 'Home',
-      href: 'home'
-    },
-    {
       title: 'Serviços',
       href: 'servicos'
     },

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
@@ -9,8 +9,15 @@ import { TrabalheConoscoComponent } from './pages/trabalhe-conosco/trabalhe-cono
 import { ContatoComponent } from './pages/contato/contato.component';
 import { EmBreveComponent } from './pages/em-breve/em-breve.component';
 
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 64],
+};
+
 const routes: Routes = [
-  { path: '', redirectTo: 'embreve', pathMatch: 'full' },
+  // { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'servicos', component: ServicosComponent },
   { path: 'nossa-historia', component: HistoriaComponent },
@@ -21,7 +28,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
