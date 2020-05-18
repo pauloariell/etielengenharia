@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { PagesModule } from './pages/pages.module';
-
 import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
+
+import { PagesModule } from './pages/pages.module';
+
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { LoadingModule } from './shared/components/loading/loading.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { FooterComponent } from './shared/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PagesModule
+    PagesModule,
+    LoadingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

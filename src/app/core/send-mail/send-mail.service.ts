@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
  
-@Injectable()
-export class MessageService {
+@Injectable({
+  providedIn: 'root'
+})
+export class SendMailService {
  
   constructor(private _http: HttpClient) {}
  

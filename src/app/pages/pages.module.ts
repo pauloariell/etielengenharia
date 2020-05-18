@@ -16,13 +16,17 @@ import { HistoriaComponent } from './historia/historia.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { LoadingModule } from '../shared/components/loading/loading.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule 
+    RouterModule,
+    HttpClientModule,
+    LoadingModule 
   ],
   declarations: [
     EmBreveComponent,

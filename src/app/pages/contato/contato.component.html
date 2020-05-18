@@ -3,7 +3,7 @@
       <div class="thecontainer">
         <div class="contact-box">
           <div class="left"></div>
-          <form formGroupName="contactForm" class="right">
+          <form [formGroup]="contactForm" class="right" (submit)="sendMail()">
             <h2>Contato</h2>
             <input 
               type="text"
@@ -11,6 +11,7 @@
               placeholder="Seu nome"
               formControlName="name"
             >
+            <ee-loading *ngIf="showOverlay"></ee-loading>
             <input
               type="email"
               class="field"
@@ -27,7 +28,7 @@
               class="field area" 
               placeholder="Olá..."
             ></textarea>
-            <button class="mybtn">Enviar Email</button>
+            <button type="submit" class="mybtn">Enviar Email</button>
           </form>
         </div>
       </div>
