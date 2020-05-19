@@ -1,4 +1,43 @@
-<section *ngIf="!isEmBreve()" [ngClass]="[ 'footer']">
-  <h2>Footer</h2>
-  <p>Estamos em obras... <img src="assets/img/construction2.gif" alt="" style="width: 100px;"></p>
+<section *ngIf="!isEmBreve()" id="footer">
+  <!-- <h2>Footer</h2>
+  <p>Estamos em obras... <img src="assets/img/construction2.gif" alt="" style="width: 100%;"></p> -->
+  <div [ngClass]="['footer']">
+    <div [ngClass]="['footer-quad']">
+      <div [ngClass]="['adress']">
+        <address>
+          <strong>ETIEL Engenharia</strong><br>
+          Rua Pedro Escobar, 1204 - CJ-1, Grajaú, São Paulo, SP<br>
+          <strong>Tel:</strong> (11) 95130-7313<br>
+        </address>
+      </div>
+    </div>
+    <div [ngClass]="['footer-quad', 'logo']">
+      <img src="assets/img/logo-200x84.png" alt="">
+    </div>
+    <div [ngClass]="['footer-quad', 'social-media']">
+      <a class="" href="mailto:etiel@etielengenharia.com.br?subject=Olá%20ETIEL%20Engenharia" target="_top">
+        <i class="fas fa-envelope-square"></i>
+      </a>
+      <a class="wp-ic" href="https://api.whatsapp.com/send?phone=5511951307313" target="_blank">
+        <i class="fab fa-whatsapp-square"></i>
+      </a>
+      <a class="ins-ic" href="https://www.instagram.com/etiel_engenharia/" target="_blank">
+        <i class="fab fa-instagram-square"></i>
+      </a>
+      <a class="fb-ic" href="https://www.facebook.com/aetielengenharia/" target="_blank">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="https://www.linkedin.com/company/aetielengenharia" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a class="yt-ic" href="https://www.youtube.com/channel/UCCmq8oNiVHvOXwWBH0l1nUQ/featured?view_as=subscriber" target="_blank">
+        <i class="fab fa-youtube-square"></i>
+      </a>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>© 2020 Copyright:
+      <a href="http://www.paccode.com.br" style="color:#ff9100;"> paccode.com.br</a>
+    </p>
+  </div>
 </section>
