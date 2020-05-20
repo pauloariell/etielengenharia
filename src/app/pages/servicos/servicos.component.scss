@@ -1,5 +1,5 @@
 .servicos-area {
-  padding: 60px;
+  padding: 70px;
   position: relative;
   display: flex;
   justify-content: space-around;
@@ -54,8 +54,8 @@ body {
 .myContainer .myCard .imgBx {
   position: relative;
   left: 25px;
-  width: 200px;
-  height: 175px;
+  width: 13rem;
+  height: 10rem;
   z-index: 1;
 }
 .myContainer .myCard:nth-child(even) .imgBx {

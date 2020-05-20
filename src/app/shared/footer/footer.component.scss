@@ -1,4 +1,4 @@
-#footer{
+.footer{
   right: 0;
   bottom: 0;
   left: 0;
@@ -7,7 +7,7 @@
   background-color: #efefef;
 }
 
-.footer {
+.footer-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,14 +18,17 @@
 .footer-quad{
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100px;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   // border: 2px solid #E02140;
 }
 
 .adress {
   text-align: left;
+  margin-left: 15px;
+  justify-content: flex-start;
 }
 
 .footer-quad .logo {
@@ -33,13 +36,43 @@
 }
 
 .social-media{
-  justify-content: space-between;
+  width: 50%;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .social-media i {
   color: #ff8c00;
   background-color: rgba(0,0,0,0);
   font-size: 3rem;
-  margin: 10px;
+  margin: 0 15px;
+}
+
+.footer-newsletter{
+  width: 50%;  
+}
+
+.field-mail{
+  border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding: 5px;
+}
+
+.field-button{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 5px;
+	background-color: #ff8c00;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.field-button,
+.field-mail {
+	outline: 0;
+	border: 1px solid #ff8c00;
+	box-sizing: border-box;
+	font-size: 16px;
 }
 
 .copyright > * {
@@ -51,4 +84,10 @@
   align-items: center;
   justify-content: center;
   // border: 2px solid;
+}
+
+@media screen and (max-width: 768px){
+  .footer-container {
+    flex-direction: column;
+  }
 }

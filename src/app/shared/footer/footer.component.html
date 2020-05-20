@@ -1,15 +1,13 @@
-<section *ngIf="!isEmBreve()" id="footer">
+<section *ngIf="!isEmBreve()" id="footer" [ngClass]="['footer']">
   <!-- <h2>Footer</h2>
   <p>Estamos em obras... <img src="assets/img/construction2.gif" alt="" style="width: 100%;"></p> -->
-  <div [ngClass]="['footer']">
-    <div [ngClass]="['footer-quad']">
-      <div [ngClass]="['adress']">
-        <address>
-          <strong>ETIEL Engenharia</strong><br>
-          Rua Pedro Escobar, 1204 - CJ-1, Grajaú, São Paulo, SP<br>
-          <strong>Tel:</strong> (11) 95130-7313<br>
-        </address>
-      </div>
+  <div [ngClass]="['footer-container']">
+    <div [ngClass]="['footer-quad','adress']">
+      <address>
+        <strong>ETIEL Engenharia</strong><br>
+        Rua Pedro Escobar, 1204 - CJ-1, Grajaú, São Paulo, SP<br>
+        <strong>Tel:</strong> (11) 95130-7313<br>
+      </address>
     </div>
     <div [ngClass]="['footer-quad', 'logo']">
       <img src="assets/img/logo-200x84.png" alt="">
@@ -30,10 +28,20 @@
       <a href="https://www.linkedin.com/company/aetielengenharia" target="_blank">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a class="yt-ic" href="https://www.youtube.com/channel/UCCmq8oNiVHvOXwWBH0l1nUQ/featured?view_as=subscriber" target="_blank">
+      <a class="yt-ic" href="https://www.youtube.com/channel/UCCmq8oNiVHvOXwWBH0l1nUQ/featured?view_as=subscriber"
+        target="_blank">
         <i class="fab fa-youtube-square"></i>
       </a>
     </div>
+    <form [ngClass]="['footer-quad', 'footer-newsletter']">
+      <fieldset>
+        <legend for="email-contato">Newsletter</legend>
+        <div>
+          <input [ngClass]="['field-mail']" type="email" name="email-contato" id="email-contato">
+          <button [ngClass]="['field-button']" type="submit">Enviar</button>
+        </div>
+      </fieldset>
+    </form>
   </div>
   <div class="copyright">
     <p>© 2020 Copyright:
