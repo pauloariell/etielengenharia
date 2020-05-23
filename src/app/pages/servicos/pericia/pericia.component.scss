@@ -1,0 +1,36 @@
+.pericia-area {
+  padding: 70px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.pericia-area h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pericia-container i{
+  position: relative;
+  font-size: 80px;
+}
+
+.pericia-container .float-left{
+  float: left;
+  text-align: left;
+}
+.pericia-container .float-right{
+  float: right;
+  text-align: right;
+}
+
+.pericia-container p{
+  text-align: justify;
+}

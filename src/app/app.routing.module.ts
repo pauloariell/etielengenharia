@@ -8,6 +8,7 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { TrabalheConoscoComponent } from './pages/trabalhe-conosco/trabalhe-conosco.component';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { EmBreveComponent } from './pages/em-breve/em-breve.component';
+import { PericiaComponent } from './pages/servicos/pericia/pericia.component';
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'servicos', component: ServicosComponent },
+  { path: 'servicos/pericia', component: PericiaComponent },
   { path: 'nossa-historia', component: HistoriaComponent },
   { path: 'noticias', component: NoticiasComponent },
   { path: 'trabalhe-conosco', component: TrabalheConoscoComponent },
