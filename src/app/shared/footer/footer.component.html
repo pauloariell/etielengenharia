@@ -12,28 +12,30 @@
     <div [ngClass]="['footer-quad', 'logo']">
       <img src="assets/img/logo-200x84.png" alt="">
     </div>
-    <div [ngClass]="['footer-quad', 'social-media']">
-      <a class="" href="mailto:etiel@etielengenharia.com.br?subject=Olá%20ETIEL%20Engenharia" target="_top">
-        <i class="fas fa-envelope-square"></i>
-      </a>
-      <a class="wp-ic" href="https://api.whatsapp.com/send?phone=5511951307313" target="_blank">
-        <i class="fab fa-whatsapp-square"></i>
-      </a>
-      <a class="ins-ic" href="https://www.instagram.com/etiel_engenharia/" target="_blank">
-        <i class="fab fa-instagram-square"></i>
-      </a>
-      <a class="fb-ic" href="https://www.facebook.com/aetielengenharia/" target="_blank">
-        <i class="fab fa-facebook-square"></i>
-      </a>
-      <a href="https://www.linkedin.com/company/aetielengenharia" target="_blank">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a class="yt-ic" href="https://www.youtube.com/channel/UCCmq8oNiVHvOXwWBH0l1nUQ/featured?view_as=subscriber"
-        target="_blank">
-        <i class="fab fa-youtube-square"></i>
-      </a>
+    <div [ngClass]="['footer-quad', 'social-container']">
+      <div [ngClass]="['social-media']">
+        <a class="" href="mailto:etiel@etielengenharia.com.br?subject=Olá%20ETIEL%20Engenharia" target="_top">
+          <i class="fas fa-envelope-square"></i>
+        </a>
+        <a class="wp-ic" href="https://api.whatsapp.com/send?phone=5511951307313" target="_blank">
+          <i class="fab fa-whatsapp-square"></i>
+        </a>
+        <a class="ins-ic" href="https://www.instagram.com/etiel_engenharia/" target="_blank">
+          <i class="fab fa-instagram-square"></i>
+        </a>
+        <a class="fb-ic" href="https://www.facebook.com/aetielengenharia/" target="_blank">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/aetielengenharia" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="yt-ic" href="https://www.youtube.com/channel/UCCmq8oNiVHvOXwWBH0l1nUQ/featured?view_as=subscriber"
+          target="_blank">
+          <i class="fab fa-youtube-square"></i>
+        </a>
+      </div>
     </div>
-    <form [ngClass]="['footer-quad', 'footer-newsletter']">
+    <!-- <form [ngClass]="['footer-quad', 'footer-newsletter']">
       <fieldset>
         <legend for="email-contato">Newsletter</legend>
         <div>
@@ -41,7 +43,7 @@
           <button [ngClass]="['field-button']" type="submit">Enviar</button>
         </div>
       </fieldset>
-    </form>
+    </form> -->
   </div>
   <div class="copyright">
     <p>© 2020 Copyright:

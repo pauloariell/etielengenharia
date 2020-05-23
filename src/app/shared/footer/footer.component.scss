@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 1rem;
-  // border: 2px solid
+  // // border: 2px solid
 }
 
 .footer-quad{
@@ -27,25 +27,34 @@
 
 .adress {
   text-align: left;
-  margin-left: 15px;
+  margin-left: 10px;
   justify-content: flex-start;
+  width: 100%;
 }
 
 .footer-quad .logo {
   width: 60%;
 }
+.social-container{
+  justify-content: flex-end;
+}
 
 .social-media{
-  width: 50%;
-  align-items: center;
+  display: flex;
+  position: relative;
+  width: 210px;
+  align-items: flex-end;
   justify-content: space-around;
   flex-wrap: wrap;
+  // border: 2px blue solid;
 }
 .social-media i {
   color: #ff8c00;
   background-color: rgba(0,0,0,0);
-  font-size: 3rem;
+  text-align: left;
+  font-size: 40px;
   margin: 0 15px;
+  // border: 2px red solid;
 }
 
 .footer-newsletter{
@@ -83,7 +92,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // border: 2px solid;
+  // // border: 2px solid;
 }
 
 @media screen and (max-width: 768px){
