@@ -42,6 +42,31 @@
 .nav-etiel a:hover{
   color: #cf7405!important;
 }
+
+.nav-servicos{
+  display: none;
+  position: absolute;
+  background-color: #efefef;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.63);
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+  z-index: 1;
+}
+
+.nav-servicos li a{
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-dropdown:hover .nav-servicos {
+  display: block;
+}
+
+
+
 .nav-active{
   transform: translateX(0%)!important;
 }
@@ -71,8 +96,11 @@
 
 @media screen and (max-width: 768px){
   body {
-    overflow-x: hidden;
+    overflow-x: hidden!important;
   }
+  // .navbar-etiel{
+  //   width: 100vw;
+  // }
   ul.nav-etiel {
     position: absolute;
     right: 0px;
@@ -81,7 +109,7 @@
     margin-right: 0;
     padding: 0;
     justify-content: space-evenly;
-    background-color: #d4d7de;
+    background-color: #efefef;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,7 +127,7 @@
 
 @keyframes navLinkFade{
   from{
-    opacity: 0;
+    opacity: 0!important;
     transform: translateX(50%);
   }
   to{

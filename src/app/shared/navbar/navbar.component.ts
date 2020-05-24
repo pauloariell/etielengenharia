@@ -91,11 +91,11 @@ export class NavbarComponent implements OnInit {
       if (window.pageYOffset > 50) {
         let element = document.getElementById('navbar-etiel');
         // element.classList.add('bg-primary');
-        element.classList.remove('navbar-transparent');
+        //element.classList.remove('navbar-transparent');
       } else {
         let element = document.getElementById('navbar');
         // element.classList.remove('bg-primary');
-        element.classList.add('navbar-transparent');
+        //element.classList.add('navbar-transparent');
       }
     }
   };
