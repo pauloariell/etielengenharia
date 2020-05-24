@@ -1,7 +1,7 @@
 .navbar-etiel{
   position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -16,11 +16,7 @@
 }
 .logo {
   flex: 1 1 auto; /*Estudar porque*/
-  margin-left: 10%;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
-  font-style: 35px;
+  margin-left: 5%;
 }
 .logo img {
   margin: 0;
@@ -28,18 +24,30 @@
 }
 .nav-etiel{
   display: flex;
-  justify-content: right;
+  padding: 0px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
   list-style: none;
-  margin-top: 1%;
-  margin-right: 22.5%;
+  height: 100%;
+  width: 100%;
+  // border: 2px solid #e02140;
 }
+// .nav-etiel li{
+//   display: flex;
+//   height: 100%;
+//   position: relative;
+//   align-items: center;
+//   justify-content: center;
+//   border: 2px solid #e02140;
+// }
 .nav-etiel a {
   margin: 10px;
   color: #000!important;
   text-decoration: none;
   text-transform: uppercase;
 }
-.nav-etiel a:hover{
+.nav-etiel li:hover >*{
   color: #cf7405!important;
 }
 
@@ -56,7 +64,7 @@
 }
 
 .nav-servicos li a{
-  padding: 12px 16px;
+  // padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
@@ -66,9 +74,17 @@
 }
 
 
-
 .nav-active{
   transform: translateX(0%)!important;
+}
+.nav-language{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 15%;
+}
+.nav-language img {
+  height: 30px;
 }
 
 .burguer {
@@ -98,13 +114,10 @@
   body {
     overflow-x: hidden!important;
   }
-  // .navbar-etiel{
-  //   width: 100vw;
-  // }
   ul.nav-etiel {
     position: absolute;
     right: 0px;
-    height: 90vh;
+    height: 100vh;
     top: 6vh;
     margin-right: 0;
     padding: 0;

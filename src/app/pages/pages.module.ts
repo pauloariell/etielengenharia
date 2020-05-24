@@ -13,6 +13,7 @@ import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.co
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingModule } from '../shared/components/loading/loading.module';
+import { AvaliacaoComponent } from './servicos/avaliacao/avaliacao.component';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import { LoadingModule } from '../shared/components/loading/loading.module';
     PericiaComponent,
     HistoriaComponent,
     NoticiasComponent,
-    TrabalheConoscoComponent
+    TrabalheConoscoComponent,
+    AvaliacaoComponent
   ]
 })
 export class PagesModule { }

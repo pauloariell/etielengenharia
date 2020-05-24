@@ -9,6 +9,7 @@ import { TrabalheConoscoComponent } from './pages/trabalhe-conosco/trabalhe-cono
 import { ContatoComponent } from './pages/contato/contato.component';
 import { EmBreveComponent } from './pages/em-breve/em-breve.component';
 import { PericiaComponent } from './pages/servicos/pericia/pericia.component';
+import { AvaliacaoComponent } from './pages/servicos/avaliacao/avaliacao.component';
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'servicos', component: ServicosComponent },
   { path: 'servicos/pericia', component: PericiaComponent },
+  { path: 'servicos/avaliacao', component: AvaliacaoComponent },
   { path: 'nossa-historia', component: HistoriaComponent },
   { path: 'noticias', component: NoticiasComponent },
   { path: 'trabalhe-conosco', component: TrabalheConoscoComponent },

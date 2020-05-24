@@ -1,10 +1,14 @@
-<div *ngIf="!isEmBreve()" id="navbar" 
+<div *ngIf="!isEmBreve()" id="" 
     [ngClass]="[
         true ? 'navbar-etiel' : '',
         home ? 'navbar-transparent' : ''
         ]"
-    (scroll)="onWindowScroll($event);">
-    <a href=" #" class="logo">
+    (scroll)="onWindowScroll($event);"
+    >
+    <a 
+        [routerLink]="['/home']"
+        [ngClass]="['logo']"
+    >
         <img [src]="LogoImg" alt="">
     </a>
     <ul [ngClass]="['nav-etiel']">
@@ -30,11 +34,15 @@
         <li>
             <a class="" [routerLink]="['/home']" [fragment]="'contato'">Contato</a>
         </li>
-
-        <!-- <li *ngFor="let menu of menus" class="">
-            <a class="" [routerLink]="['/home']" [fragment]="menu.href">{{ menu.title }}</a>
-        </li> -->
     </ul>
+    <div [ngClass]="['nav-language']">
+        <a [routerLink]="['/home']">
+            <img src="assets/img/usa-flag.svg" alt="USA Flag">
+        </a>
+        <a [routerLink]="['/home']">
+            <img src="assets/img/bra-flag.svg" alt="BRA Flag">
+        </a>
+    </div>
     <div [ngClass]="['burguer']">
         <div class="line1"></div>
         <div class="line2"></div>
