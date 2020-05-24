@@ -43,7 +43,6 @@
   display: flex;
   position: relative;
   width: 210px;
-  align-items: flex-end;
   justify-content: space-around;
   flex-wrap: wrap;
   // border: 2px blue solid;
@@ -98,5 +97,9 @@
 @media screen and (max-width: 768px){
   .footer-container {
     flex-direction: column;
+  }
+  .social-container{
+    justify-content: center;
+    align-items: center;
   }
 }
