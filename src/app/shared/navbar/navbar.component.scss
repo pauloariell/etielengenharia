@@ -79,13 +79,16 @@
 }
 .nav-language{
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 15%;
-  margin-right: 50px;
+  margin-top: 2px;
 }
 .nav-language img {
-  height: 30px;
+  //height: 30px;
+  width: 40px;
+  margin: 2px;
 }
 
 .burguer {

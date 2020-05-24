@@ -16,7 +16,7 @@
             <a [routerLink]="['/home']">Home</a>
         </li>
         <li [ngClass]="['nav-dropdown']">
-            <a class="" [routerLink]="['/home']" [fragment]="'servicos'">Serviços</a>
+            <a>Serviços</a>
             <ul [ngClass]="['nav-servicos']">
                 <li><a class="" [routerLink]="['/servicos/pericia']">Perícias</a></li>
                 <li><a class="" [routerLink]="['/servicos/avaliacao']">Avaliações</a></li>
@@ -25,9 +25,9 @@
         <li>
             <a class="" [routerLink]="['/home']" [fragment]="'nossa-historia'">Nossa História</a>
         </li>
-        <li>
+        <!-- <li>
             <a class="" [routerLink]="['/home']" [fragment]="'noticias'">Notícias</a>
-        </li>
+        </li> -->
         <li>
             <a class="" [routerLink]="['/home']" [fragment]="'trabalhe-conosco'">Trabalhe Conosco</a>
         </li>
@@ -37,10 +37,10 @@
     </ul>
     <div [ngClass]="['nav-language']">
         <a [routerLink]="['/home']">
-            <img src="assets/img/usa-flag.svg" alt="USA Flag">
+            <img src="assets/img/bra-flag.svg" alt="BRA Flag">
         </a>
         <a [routerLink]="['/home']">
-            <img src="assets/img/bra-flag.svg" alt="BRA Flag">
+            <img src="assets/img/usa-flag.svg" alt="USA Flag">
         </a>
     </div>
     <div [ngClass]="['burguer']">
