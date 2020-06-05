@@ -8,6 +8,7 @@ import { PagesModule } from './pages/pages.module';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoadingModule } from './shared/components/loading/loading.module';
+import { InvalidFeedbackModule } from './shared/components/invalid-feedback/invalid-feedback.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoadingModule } from './shared/components/loading/loading.module';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    LoadingModule
+    LoadingModule,
+    InvalidFeedbackModule
   ],
   providers: [],
   bootstrap: [AppComponent]

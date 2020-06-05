@@ -85,21 +85,26 @@
   width: 100%;
   padding: 0.5rem 1rem;
   outline: none;
-  border: 2px solid rgba($color: #000000, $alpha: 0);
+  border: 0.5px solid rgba($color: #ff8c00, $alpha: 0.5);
   border-radius: 10px;
-  background-color: rgba($color:#e6e6e6, $alpha: 0.6);
-  font-size: 1.1rem;
-  margin-bottom: 22px;
+  background-color: rgba($color:#e6e6e6, $alpha: 0.1);
+  font-size: 1rem;
+  margin-top: 22px;
   transition: .3s;
 }
+
+
 .right .field:hover{
-  background-color: rgba($color: #000000, $alpha: 0.1);
+  background-color: rgba($color: #fde9d0, $alpha: 0.8);
 }
 .right .field:focus{
   background-color: #fff;
   border: 2px solid rgba(30,85,250, 0.47);
 }
 
+.field-invalid{
+  border: 1px solid rgba($color: #e02140, $alpha: 0.5)!important;
+}
 .area {
   min-height: 150px;
 }

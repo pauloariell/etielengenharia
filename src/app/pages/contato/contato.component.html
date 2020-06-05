@@ -7,28 +7,72 @@
             <h2>Contato</h2>
             <input 
               type="text"
-              class="field"
+              [ngClass]="[
+                true ? 'field' : '',
+                (contactForm.get('name').dirty && contactForm.get('name').errors?.required) ? 'field-invalid' : ''
+              ]"
               placeholder="Seu nome"
               formControlName="name"
             >
+            <ee-invalid-feedback
+              *ngIf="contactForm.get('name').dirty && contactForm.get('name').errors?.required"
+              text="Campo de preenchimento obrigaótio*">
+            </ee-invalid-feedback>
             <ee-loading *ngIf="showOverlay"></ee-loading>
+
             <input
               type="email"
-              class="field"
+              [ngClass]="[
+                true ? 'field' : '',
+                (contactForm.get('email').dirty && contactForm.get('email').errors?.required) ? 'field-invalid' : ''
+              ]"
               placeholder="e-mail"
               formControlName="email"
+              ngModel email
             >
+            <ee-invalid-feedback
+              *ngIf="contactForm.get('email').dirty && contactForm.get('email').errors?.required"
+              text="Campo de preenchimento obrigaótio*">
+            </ee-invalid-feedback>
+            <ee-invalid-feedback
+              *ngIf="contactForm.get('email').errors?.email"
+              text="E-mail invalido!">
+            </ee-invalid-feedback>
+
             <input 
-              type="text"
-              class="field"
+              type="numeric"
+              [ngClass]="[
+                true ? 'field' : '',
+                (contactForm.get('phone').dirty && contactForm.get('phone').errors?.required) ? 'field-invalid' : ''
+              ]"
               placeholder="telefone"
               formControlName="phone"
             >
+            <ee-invalid-feedback
+              *ngIf="contactForm.get('phone').dirty && contactForm.get('phone').errors?.required"
+              text="Campo de preenchimento obrigaótio*">
+            </ee-invalid-feedback>
+
             <textarea 
-              class="field area" 
+              [ngClass]="[
+                true ? 'field' : '',
+                (contactForm.get('description').dirty && contactForm.get('description').errors?.required) ? 'field-invalid' : ''
+              ]" 
               placeholder="Olá..."
+              formControlName="description"
             ></textarea>
-            <button type="submit" class="mybtn">Enviar  <i class="fas fa-paper-plane"></i></button>
+            <ee-invalid-feedback
+              *ngIf="contactForm.get('description').dirty && contactForm.get('phone').errors?.required"
+              text="Campo de preenchimento obrigaótio*"
+            >
+            </ee-invalid-feedback>
+            <button
+              [disabled]="contactForm.invalid"
+              type="submit"
+              class="mybtn"
+            >
+              Enviar  <i class="fas fa-paper-plane"></i>
+            </button>
           </form>
         </div>
       </div>

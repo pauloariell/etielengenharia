@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {
   Router,
   Event as RouterEvent,
@@ -27,29 +27,27 @@ export class ContatoComponent implements OnInit {
 
   ngOnInit(): void {
     this.contactForm = this.formBuilder.group({
-      name: [
-        '',
-        Validators.required
-      ],
-      email: [
-        '',
-        Validators.required,
-        Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
-      ]
+      name: ['',[Validators.required]],
+      email: ['',[Validators.required, Validators.email]],
+      phone: ['',[Validators.required]],
+      description: ['',[Validators.required]],
     });
   }
 
   sendMail() {
-    const name = this.contactForm.get('name').value;
-    const email = this.contactForm.get('email').value;
+    this.turnOnOverlay();
 
-    const body = {
-      "emailto": email,
-      "subject": `[SITE] Contato nome:${name}`,
-      "text": "teste de envio de email via aplicação"
+    if (this.contactForm.invalid) {
+      this.turnOffOverlay()
+      return;
     }
     
-    this.turnOnOverlay();
+    console.log(`[DATA SUCESS]: ${JSON.stringify(this.contactForm.value)}`);
+    
+    const { name, email, phone, description } = this.contactForm.value;
+    const body = {
+      name, email, phone, description
+    }
 
     this.sendMailService
       .sendMessage(body)
@@ -58,6 +56,7 @@ export class ContatoComponent implements OnInit {
           this.showOverlay = false;
           alert('deu bão');
           this.turnOffOverlay();
+          this.contactForm.reset();
         },
         err => {
           this.turnOffOverlay();
@@ -74,4 +73,6 @@ export class ContatoComponent implements OnInit {
   turnOffOverlay() {
     this.showOverlay = false;
   };
+
+
 }

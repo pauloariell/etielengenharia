@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoadingModule } from '../shared/components/loading/loading.module';
 import { AvaliacaoComponent } from './servicos/avaliacao/avaliacao.component';
 
+import { InvalidFeedbackModule } from '../shared/components/invalid-feedback/invalid-feedback.module';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { AvaliacaoComponent } from './servicos/avaliacao/avaliacao.component';
     ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
-    LoadingModule 
+    LoadingModule ,
+    InvalidFeedbackModule
   ],
   declarations: [
     EmBreveComponent,
