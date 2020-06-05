@@ -32,6 +32,6 @@ sendMessage(data) {
   //           Assunto:${data.description}`
   // }
   console.log(JSON.stringify(data));
-  return this._http.post(`${this.url_dev}/sendmail`, data);
+  return this._http.post(`${URL_API}/sendmail`, data);
 }
 }
