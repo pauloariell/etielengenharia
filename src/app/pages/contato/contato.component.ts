@@ -1,13 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {
-  Router,
-  Event as RouterEvent,
-  NavigationStart,
-  NavigationEnd,
-  NavigationCancel,
-  NavigationError
-} from '@angular/router';
 import { SendMailService } from 'src/app/core/send-mail/send-mail.service'
 
 @Component({
@@ -21,8 +13,7 @@ export class ContatoComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private sendMailService: SendMailService,
-    private router: Router
+    private sendMailService: SendMailService
   ) {}
 
   ngOnInit(): void {
