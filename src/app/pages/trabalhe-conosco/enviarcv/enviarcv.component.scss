@@ -1,0 +1,67 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enviarcv-area {
+  padding: 70px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+
+.myContainer{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.myContainer .imgBox{
+  display: flex;
+  width: 70%;
+  height: 100%;
+  border: 2px solid #E02140;
+}
+
+.myContainer .form-cv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  // width: 100%;
+  width: 550px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px 3px #888888;
+}
+.form-cv form{
+  display: flex;
+  width: 500px;
+  height: 50%;
+  margin: 0 auto;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-input{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: auto 0;
+  // border: 2px solid #E02140;
+}
+
+.logo{
+  font-size: 100px;
+}

@@ -1,0 +1,64 @@
+<section class="enviarcv-area">
+  <h2>Trabalhe com a ETIEL Engenharia!</h2>
+  <div class="myContainer">
+    <!-- <div class="imgBox"></div> -->
+    <div class="form-cv">
+      <div class="logo">
+        <i class="far fa-id-card" size="7"></i>
+      </div>
+      <form [formGroup]="enviacvForm" (ngSubmit)="onSubmit()" method="post">
+        <div class="form-input">
+          <label for="first-name">First Name</label>
+          <input
+            name="first-name"
+            formControlName="name"
+            type="text"
+            placeholder="Flambenilton"
+          >
+        </div>
+        <div class="form-input">
+          <label for="last-name">Último nome</label>
+          <input
+            name="last-name"
+            formControlName="name" 
+            type="text"
+            placeholder="da Silva"
+          >
+        </div>
+        <div class="form-input">
+          <label for="email">E-mail</label>
+          <input
+            name="email"
+            formControlName="name"
+            type="email"
+            placeholder="flambenilton@host.com"
+          >
+        </div>
+        <div class="form-input">
+          <label for="phone">Telefone</label>
+          <input
+            name="phone"
+            formControlName="name"
+            type="number"
+            placeholder="(19)98899-7755"
+          >
+        </div>
+        <div class="form-input">
+          <label for="description">Sobre você</label>
+          <textarea
+            name="description"
+            formControlName="name"
+            cols="30"
+            rows="2"></textarea>
+        </div>
+        <div class="form-input">
+          <label for="cvfile">Curriculum (PDF)</label>
+          <input name="cvfile" type="file" name="profile" >
+        </div>
+        <button [disabled]="!enviacvForm.valid" type="submit" class="mybtn">
+          Enviar <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
