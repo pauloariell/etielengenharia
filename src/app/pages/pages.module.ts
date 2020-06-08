@@ -16,6 +16,7 @@ import { LoadingModule } from '../shared/components/loading/loading.module';
 import { AvaliacaoComponent } from './servicos/avaliacao/avaliacao.component';
 
 import { InvalidFeedbackModule } from '../shared/components/invalid-feedback/invalid-feedback.module';
+import { EnviarcvComponent } from './trabalhe-conosco/enviarcv/enviarcv.component';
 
 @NgModule({
   imports: [
@@ -36,7 +37,8 @@ import { InvalidFeedbackModule } from '../shared/components/invalid-feedback/inv
     HistoriaComponent,
     NoticiasComponent,
     TrabalheConoscoComponent,
-    AvaliacaoComponent
+    AvaliacaoComponent,
+    EnviarcvComponent
   ]
 })
 export class PagesModule { }
