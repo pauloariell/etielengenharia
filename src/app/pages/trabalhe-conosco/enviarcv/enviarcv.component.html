@@ -1,83 +1,114 @@
 <section class="enviarcv-area">
-  <h2>Trabalhe com a ETIEL Engenharia!</h2>
+  <h2>Faça parte da nossa equipe!</h2>
+  <ee-loading *ngIf="showOverlay"></ee-loading>
   <div class="myContainer">
     <!-- <div class="imgBox"></div> -->
     <div class="form-cv backgorund">
       <!-- <div class="logo">
         <i class="far fa-id-card" size="7"></i>
       </div> -->
-      <form [formGroup]="enviacvForm" (ngSubmit)="onSubmit()" method="post">
+      <form [formGroup]="enviacvForm" (ngSubmit)="onSubmit()">
         <div class="form-input">
-          <label for="first-name">Nome</label>
+          <label for="firstname">Nome</label>
           <input
-            name="first-name"
-            formControlName="name"
+            name="firstname"
+            formControlName="firstname"
             type="text"
             placeholder="Flambenilton"
           >
         </div>
         <div class="form-input">
-          <label for="last-name">Sobrenome</label>
+          <ee-invalid-feedback
+            *ngIf="enviacvForm.get('firstname').dirty && enviacvForm.get('firstname').errors?.required"
+            text="Campo de preenchimento obrigaótio*">
+          </ee-invalid-feedback>
+        </div>
+
+        <div class="form-input">
+          <label for="lastname">Sobrenome</label>
           <input
-            name="last-name"
-            formControlName="name"
+            name="lastname"
+            formControlName="lastname"
             type="text"
             placeholder="da Silva"
           >
         </div>
         <div class="form-input">
+          <ee-invalid-feedback
+            *ngIf="enviacvForm.get('lastname').dirty && enviacvForm.get('lastname').errors?.required"
+            text="Campo de preenchimento obrigaótio*">
+          </ee-invalid-feedback>
+        </div>
+
+        <div class="form-input">
           <label for="email">E-mail</label>
           <input
             name="email"
-            formControlName="name"
+            formControlName="email"
             type="email"
             placeholder="flambenilton@host.com"
           >
         </div>
         <div class="form-input">
+          <ee-invalid-feedback
+            *ngIf="enviacvForm.get('email').dirty && enviacvForm.get('email').errors?.required"
+            text="Campo de preenchimento obrigaótio*">
+          </ee-invalid-feedback>
+          <ee-invalid-feedback
+            *ngIf="enviacvForm.get('email').errors?.email"
+            text="E-mail invalido!">
+          </ee-invalid-feedback>
+        </div>
+
+        <div class="form-input">
           <label for="phone">Telefone</label>
           <input
             name="phone"
-            formControlName="name"
-            type="number"
+            formControlName="phone"
+            type="text"
             placeholder="(19)98899-7755"
             >
         </div>
         <div class="form-input">
-          <label for="uf">UF</label>
-          <input
-            name="uf"
-            formControlName="uf"
-            type="text"
-            placeholder="SP"
-          >
+          <ee-invalid-feedback
+            *ngIf="enviacvForm.get('phone').dirty && enviacvForm.get('phone').errors?.required"
+            text="Campo de preenchimento obrigaótio*">
+          </ee-invalid-feedback>
         </div>
+
         <div class="form-input">
-          <label for="city">Cidade</label>
-          <input
-            name="city"
-            formControlName="city"
-            type="text"
-            placeholder="São Paulo"
-          >
-        </div>
-        <div class="form-input">
-          <label for="description">Sobre você</label>
+          <label for="description">Assunto</label>
           <textarea
             name="description"
-            formControlName="name"
+            formControlName="description"
             cols="30"
             rows="3"></textarea>
         </div>
         <div class="form-input">
+          <ee-invalid-feedback
+            *ngIf="enviacvForm.get('description').dirty && enviacvForm.get('description').errors?.required"
+            text="Campo de preenchimento obrigaótio*">
+          </ee-invalid-feedback>
+        </div>
+
+        <div class="form-input">
           <label for="" class="">Curriculum (PDF)</label>
           <label for="cvfile" class="upload"><i class="fas fa-file-pdf"></i></label>
-          <input id="cvfile" name="cvfile" type="file" name="profile" >
+          <input
+            id="cvfile"
+            name="cvfile"
+            type="file"
+            formControlName="file"
+            (change)="onFileChange($event)"
+          >
         </div>
-        <button [disabled]="!enviacvForm.valid" type="submit" class="mybtn">
-          Enviar <i class="fas fa-paper-plane"></i>
-        </button>
+        <div class="mybtn">
+          <button type="submit" [disabled]="enviacvForm.invalid" >
+            Enviar <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
       </form>
+
       <!-- <form>
         <div class="form-group row">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
@@ -94,4 +125,5 @@
       </form> -->
     </div>
   </div>
+
 </section>
