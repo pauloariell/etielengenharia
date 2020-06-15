@@ -1,11 +1,11 @@
-<div *ngIf="!isEmBreve()" id="" 
+<div *ngIf="!isEmBreve()" id=""
     [ngClass]="[
         true ? 'navbar-etiel' : '',
         home ? 'navbar-transparent' : ''
         ]"
     (scroll)="onWindowScroll($event);"
     >
-    <a 
+    <a
         [routerLink]="['/home']"
         [ngClass]="['logo']"
     >
@@ -23,13 +23,15 @@
             </ul>
         </li>
         <li>
-            <a class="" [routerLink]="['/home']" [fragment]="'nossa-historia'">Nossa História</a>
+            <a class="" [routerLink]="['/nossa-historia']" [routerLinkActive]="['active']">Nossa História</a>
+            <!-- <a class="" [routerLink]="['/home']" [fragment]="'nossa-historia'">Nossa História</a> -->
         </li>
         <!-- <li>
             <a class="" [routerLink]="['/home']" [fragment]="'noticias'">Notícias</a>
         </li> -->
         <li>
-            <a class="" [routerLink]="['/home']" [fragment]="'trabalhe-conosco'">Trabalhe Conosco</a>
+            <a class="" [routerLink]="['/trabalhe-conosco/enviar-cv']" [routerLinkActive]="['active']">Trabalhe Conosco</a>
+            <!-- <a class="" [routerLink]="['/home']" [fragment]="'trabalhe-conosco'">Trabalhe Conosco</a> -->
         </li>
         <li>
             <a class="" [routerLink]="['/home']" [fragment]="'contato'">Contato</a>
