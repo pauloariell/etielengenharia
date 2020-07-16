@@ -15,12 +15,16 @@
             formControlName="firstname"
             type="text"
             placeholder="Flambenilton"
-          >
+          />
         </div>
         <div class="form-input">
           <ee-invalid-feedback
-            *ngIf="enviacvForm.get('firstname').dirty && enviacvForm.get('firstname').errors?.required"
-            text="Campo de preenchimento obrigaótio*">
+            *ngIf="
+              enviacvForm.get('firstname').dirty &&
+              enviacvForm.get('firstname').errors?.required
+            "
+            text="Campo de preenchimento obrigaótio*"
+          >
           </ee-invalid-feedback>
         </div>
 
@@ -31,12 +35,16 @@
             formControlName="lastname"
             type="text"
             placeholder="da Silva"
-          >
+          />
         </div>
         <div class="form-input">
           <ee-invalid-feedback
-            *ngIf="enviacvForm.get('lastname').dirty && enviacvForm.get('lastname').errors?.required"
-            text="Campo de preenchimento obrigaótio*">
+            *ngIf="
+              enviacvForm.get('lastname').dirty &&
+              enviacvForm.get('lastname').errors?.required
+            "
+            text="Campo de preenchimento obrigaótio*"
+          >
           </ee-invalid-feedback>
         </div>
 
@@ -47,16 +55,21 @@
             formControlName="email"
             type="email"
             placeholder="flambenilton@host.com"
-          >
+          />
         </div>
         <div class="form-input">
           <ee-invalid-feedback
-            *ngIf="enviacvForm.get('email').dirty && enviacvForm.get('email').errors?.required"
-            text="Campo de preenchimento obrigaótio*">
+            *ngIf="
+              enviacvForm.get('email').dirty &&
+              enviacvForm.get('email').errors?.required
+            "
+            text="Campo de preenchimento obrigaótio*"
+          >
           </ee-invalid-feedback>
           <ee-invalid-feedback
             *ngIf="enviacvForm.get('email').errors?.email"
-            text="E-mail invalido!">
+            text="E-mail invalido!"
+          >
           </ee-invalid-feedback>
         </div>
 
@@ -67,47 +80,107 @@
             formControlName="phone"
             type="text"
             placeholder="(19)98899-7755"
-            >
+          />
         </div>
         <div class="form-input">
           <ee-invalid-feedback
-            *ngIf="enviacvForm.get('phone').dirty && enviacvForm.get('phone').errors?.required"
-            text="Campo de preenchimento obrigaótio*">
+            *ngIf="
+              enviacvForm.get('phone').dirty &&
+              enviacvForm.get('phone').errors?.required
+            "
+            text="Campo de preenchimento obrigaótio*"
+          >
           </ee-invalid-feedback>
         </div>
-
         <div class="form-input">
           <label for="description">Assunto</label>
           <textarea
             name="description"
             formControlName="description"
             cols="30"
-            rows="3"></textarea>
+            rows="3"
+          ></textarea>
         </div>
         <div class="form-input">
           <ee-invalid-feedback
-            *ngIf="enviacvForm.get('description').dirty && enviacvForm.get('description').errors?.required"
-            text="Campo de preenchimento obrigaótio*">
+            *ngIf="
+              enviacvForm.get('description').dirty &&
+              enviacvForm.get('description').errors?.required
+            "
+            text="Campo de preenchimento obrigaótio*"
+          >
           </ee-invalid-feedback>
         </div>
 
         <div class="form-input">
           <label for="" class="">Curriculum (PDF)</label>
-          <label for="cvfile" class="upload"><i class="fas fa-file-pdf"></i></label>
+          <label for="cvfile" class="upload"
+            ><i class="fas fa-file-pdf"></i
+          ></label>
           <input
             id="cvfile"
             name="cvfile"
             type="file"
             formControlName="file"
             (change)="onFileChange($event.target.files)"
-          >
+
+          />
         </div>
         <div class="mybtn">
-          <button type="submit"  >
+          <button type="submit">
             Enviar <i class="fas fa-paper-plane"></i>
           </button>
         </div>
       </form>
+
+
+      <!-- Small modal -->
+      <!-- <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target=".bd-example-modal-sm"
+      >
+        Small modal
+      </button> -->
+
+      <div
+        [ngClass]="[
+                true ? 'modal' : '',
+                true ? 'fade' : '',
+                true ? 'bd-example-modal-sm' : '',
+                true ? 'modal' : '',
+                true ? 'show' : '',
+                this.showModal ? 'myShow' : 'noShow'
+              ]"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="mySmallModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalScrollableTitle">
+                ETIEL Engenharia
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                (click)="turnOffModal()"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Atenção!<br>
+              O Arquivo anexado não é um PDF!
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- <form>
         <div class="form-group row">
@@ -125,5 +198,4 @@
       </form> -->
     </div>
   </div>
-
 </section>

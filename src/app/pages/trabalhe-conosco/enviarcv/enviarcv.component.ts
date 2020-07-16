@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -7,7 +7,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./enviarcv.component.scss'],
 })
 export class EnviarcvComponent implements OnInit {
+  @ViewChild('cvfile') myInputfile: ElementRef
   public showOverlay = false;
+  public showModal = false;
+  public FileValue = '';
   enviacvForm: FormGroup;
   fileToUpload: string;
   typefile = 'application/pdf';
@@ -55,10 +58,11 @@ export class EnviarcvComponent implements OnInit {
       var file = files.item(0);
       if (file.type == this.typefile) {
         this.convertFiletoBase64(file);
+        this.clearFileUpload();
         this.turnOffOverlay();
         return;
       } else {
-        alert('Num é um PDF cacete!');
+        this.showModal = true;
         this.turnOffOverlay();
         return;
       }
@@ -91,8 +95,14 @@ export class EnviarcvComponent implements OnInit {
   turnOnOverlay() {
     this.showOverlay = true;
   }
-
   turnOffOverlay() {
     this.showOverlay = false;
+  }
+  turnOffModal() {
+    this.showModal = false;
+  }
+
+  clearFileUpload(){
+    this.myInputfile.nativeElement.value = "";
   }
 }
