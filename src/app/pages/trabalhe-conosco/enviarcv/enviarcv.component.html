@@ -122,7 +122,7 @@
             name="cvfile"
             type="file"
             formControlName="file"
-            (change)="onFileChange($event.target.files)"
+            (change)="onFileChange($event)"
 
           />
         </div>
@@ -174,9 +174,9 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
+            <!--Modal de Erro-->
             <div class="modal-body">
-              Atenção!<br>
-              O Arquivo anexado não é um PDF!
+              {{textModal}}
             </div>
           </div>
         </div>

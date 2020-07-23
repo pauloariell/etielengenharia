@@ -1,4 +1,10 @@
-import { Component, OnInit, ChangeDetectorRef, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectorRef,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -7,11 +13,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./enviarcv.component.scss'],
 })
 export class EnviarcvComponent implements OnInit {
-  @ViewChild('cvfile') myInputfile: ElementRef
+  @ViewChild('cvfile') myInputfile: ElementRef;
   public showOverlay = false;
   public showModal = false;
-  public FileValue = '';
   enviacvForm: FormGroup;
+  textModal: string;
+
+  selectedFile: File = null;
   fileToUpload: string;
   typefile = 'application/pdf';
 
@@ -52,44 +60,42 @@ export class EnviarcvComponent implements OnInit {
     // console.log(`[DATA] - formData: ${JSON.stringify(formData)}`)
   }
 
-  onFileChange(files: FileList) {
+  onFileChange(event) {
     this.turnOnOverlay();
-    if (files && files.length) {
-      var file = files.item(0);
-      if (file.type == this.typefile) {
-        this.convertFiletoBase64(file);
-        this.clearFileUpload();
-        this.turnOffOverlay();
-        return;
-      } else {
-        this.showModal = true;
-        this.turnOffOverlay();
-        return;
-      }
-      // this.fileToUpload = files.item(0);
+
+    var file = <File>event.target.files[0];
+    if (file.type !== this.typefile) {
+      this.enviacvForm.get('file').reset(null);
+      this.textModal = 'Atenção! O arquivo não é um PDF!';
+      this.showModal = true;
+      this.turnOffOverlay();
+      return false;
     }
-    this.turnOffOverlay();
-  }
 
-  loadFileBase64(file: string) {
-    console.log(`[FileConvert]->${file}`);
-    return false;
-  }
+    const FileSize = file.size / 1024 / 1024;
 
-  convertFiletoBase64(file) {
+    if (FileSize > 10) {
+      this.enviacvForm.get('file').reset(null);
+      this.textModal = 'Atenção! O arquivo é maior que 10MB!';
+      this.showModal = true;
+      this.turnOffOverlay();
+      return false;
+    }
+
     var reader = new FileReader();
-
     reader.onload = (function (file) {
       return function (e) {
         var binaryData = e.target.result;
-        //Converting Binary Data to base 64
         var base64String = window.btoa(binaryData);
-        //showing file converted to base64
         this.fileToUpload = base64String;
-        console.log(`[FileConverting] - b64: ${this.fileToUpload}`);
+        //console.log(`[FILE]->${this.fileToUpload}`);
       };
     })(file);
     reader.readAsBinaryString(file);
+
+    this.selectedFile = file;
+
+    this.turnOffOverlay();
   }
 
   turnOnOverlay() {
@@ -102,7 +108,15 @@ export class EnviarcvComponent implements OnInit {
     this.showModal = false;
   }
 
-  clearFileUpload(){
-    this.myInputfile.nativeElement.value = "";
+  formatBytes(bytes, decimals = 2) {
+    if (bytes === 0) return '0 Bytes';
+
+    const k = 1024;
+    const dm = decimals < 0 ? 0 : decimals;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
   }
 }
